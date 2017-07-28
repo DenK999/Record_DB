@@ -22,25 +22,49 @@ catch(PDOException $ex)
 	echo($ex->getMessage());
 }
 
-function randText()
+function randomString()
 {
-	$length = 15;
-	$str = "";
-	$characters = array_merge(range('A','Z'), range('a','z'));
-	$max = count($characters) - 1;
-	for ($i = 0; $i < $length; $i++) {
-		$rand = mt_rand(0, $max);
-		$str .= $characters[$rand];
-	}
-	return $str;
+	$start = 1;
+	$length = 15;	
+    return substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), $start, $length);
 
 }
+
+
+function randomTest()
+{
+	$test = "";
+	for ($i=0; $i <10000; $i++) { 
+		$name = randomString();
+		$surmname = randomString();
+		$age = randomString();		
+		$test .= "$name,$surmname,$age" . "\n";
+
+	}
+
+	return $test;
+}
+
+
+
+$time_start_randomString = microtime(1);
+
+randomTest();
+
+
+$time_end_randomString = microtime(1);
+$time_randomString = round($time_end_randomString - $time_start_randomString, 7);
+
+
+
+
 
 $fh = fopen( '../file.csv', 'w' );
 fclose($fh);
 
+$dbConnection->query("TRUNCATE TABLE users");
 
-$time_start = microtime(1);
+$time_start_main = microtime(1);
 
 //$sql = "INSERT INTO users (name, surname, age) VALUES ('Cardinal','Tom', 3)";
 
@@ -51,9 +75,9 @@ $time_start = microtime(1);
 function randomData()
 {
 	$stack = "";
-	for ($i=0; $i <100000; $i++) { 
-		$name = "gdgdgdgdgdgdgdg";
-		$surmname = "gdgdgdgdgdgdgdg";
+	for ($i=0; $i <1000000; $i++) { 
+		$name = randomString();
+		$surmname = randomString();
 		$age = rand(1,99);		
 		$stack .= "$name,$surmname,$age" . "\n";
 
@@ -63,6 +87,8 @@ function randomData()
 }
 
 
+$time_start_add_file = microtime(1);
+
 function saveRow($list) {
   $file = fopen("../file.csv","a");
   
@@ -71,11 +97,11 @@ function saveRow($list) {
 }
 	
 
-for ($i=0; $i < 50; $i++) { 
+for ($i=0; $i < 1; $i++) { 
 	saveRow(randomData());
 }
 
-
+$time_end_add_file = microtime(1);
 
 
 
@@ -88,17 +114,25 @@ for ($i=0; $i < 50; $i++) {
 }*/
 
 
-$dbConnection->query("TRUNCATE TABLE users");
+$time_start_add_bd = microtime(1);
 
 
-$dbConnection->query("COPY users(name, surname, age) FROM '/var/www/html/file.csv' WITH DELIMITER ',' CSV");
+//$dbConnection->query("COPY users(name, surname, age) FROM '/var/www/html/file.csv' WITH DELIMITER ',' CSV");
+
+$time_end_add_bd = microtime(1);
+$time_end_main = microtime(1);
 
 
+$time_add_file = round($time_end_add_file - $time_start_add_file, 3);
+$time_add_bd = round($time_end_add_bd - $time_start_add_bd, 3);
+$time_main = round($time_end_main - $time_start_main, 3);
 
-$time_end = microtime(1);
-$time = $time_end - $time_start;
 
-echo "Time is: $time sec\n";
+echo "Random function time is: <b>$time_randomString</b> sec<br><br><br>";
+
+echo "Add Data to file time is: <b>$time_add_file</b> sec<br><br>";
+echo "Add Data to BD time is: <b>$time_add_bd</b> sec<br><br>";
+echo "Main time is: <b>$time_main</b> sec";
 
 
 ?>

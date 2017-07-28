@@ -36,7 +36,7 @@ function randText()
 
 }
 
-$fh = fopen( 'file.csv', 'w' );
+$fh = fopen( '../file.csv', 'w' );
 fclose($fh);
 
 
@@ -45,14 +45,17 @@ $time_start = microtime(1);
 //$sql = "INSERT INTO users (name, surname, age) VALUES ('Cardinal','Tom', 3)";
 
 
+
+
+
 function randomData()
 {
-	$stack = array();
-	for ($i=0; $i <100000; $i++) { 
-		$name = randText();
-		$surmname = randText();
-		$age = rand(1,99);		
-		array_push($stack, Array("$name,$surmname,$age"));
+	$stack = "";
+	for ($i=0; $i <10000; $i++) { 
+		$name = "qqqqqqqqqqqqqqq";
+		$surmname = "wwwwwwwwwwwwwww";
+		$age = 2;		
+		$stack .= "$name,$surmname,$age" . "\n";
 
 	}
 
@@ -61,18 +64,24 @@ function randomData()
 
 
 function saveRow($list) {
-  $file = fopen("file.csv","a");
-  foreach ($list as $line)
-  {
-    fputcsv($file,$line);
-  }
+  $file = fopen("../file.csv","a");
+  
+    fwrite($file, print_r($list, TRUE));
   fclose($file); 
 }
 	
 
-for ($i=0; $i < 10; $i++) { 
+for ($i=0; $i < 100; $i++) { 
 	saveRow(randomData());
 }
+
+
+		
+	
+	
+
+
+
 
 
 $time_end = microtime(1);
@@ -81,4 +90,37 @@ $time = $time_end - $time_start;
 echo "Time is: $time sec\n";
 
 
-?>
+
+
+
+
+
+
+/*function insertData($dbConnection,$sql)
+{
+	for ($i=0; $i <10000 ; $i++) { 
+		$dbConnection->query($sql);    	
+	}
+}
+
+
+$dbConnection->query("TRUNCATE TABLE users");*/
+
+//insertData($dbConnection, $sql);
+
+
+
+
+
+
+
+	/*$stmt = $dbConnection->query('SELECT id FROM users');
+	
+	while ($row = $stmt->fetch())
+		{
+    		echo $row['id'];
+    	}*/
+
+
+
+    	?>

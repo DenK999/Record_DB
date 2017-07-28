@@ -51,10 +51,10 @@ $time_start = microtime(1);
 function randomData()
 {
 	$stack = "";
-	for ($i=0; $i <10000; $i++) { 
-		$name = "qqqqqqqqqqqqqqq";
-		$surmname = "wwwwwwwwwwwwwww";
-		$age = 2;		
+	for ($i=0; $i <100000; $i++) { 
+		$name = "gdgdgdgdgdgdgdg";
+		$surmname = "gdgdgdgdgdgdgdg";
+		$age = rand(1,99);		
 		$stack .= "$name,$surmname,$age" . "\n";
 
 	}
@@ -71,25 +71,9 @@ function saveRow($list) {
 }
 	
 
-for ($i=0; $i < 100; $i++) { 
+for ($i=0; $i < 50; $i++) { 
 	saveRow(randomData());
 }
-
-
-		
-	
-	
-
-
-
-
-
-$time_end = microtime(1);
-$time = $time_end - $time_start;
-
-echo "Time is: $time sec\n";
-
-
 
 
 
@@ -101,26 +85,20 @@ echo "Time is: $time sec\n";
 	for ($i=0; $i <10000 ; $i++) { 
 		$dbConnection->query($sql);    	
 	}
-}
+}*/
 
 
-$dbConnection->query("TRUNCATE TABLE users");*/
-
-//insertData($dbConnection, $sql);
+$dbConnection->query("TRUNCATE TABLE users");
 
 
-
-
+$dbConnection->query("COPY users(name, surname, age) FROM '/var/www/html/file.csv' WITH DELIMITER ',' CSV");
 
 
 
-	/*$stmt = $dbConnection->query('SELECT id FROM users');
-	
-	while ($row = $stmt->fetch())
-		{
-    		echo $row['id'];
-    	}*/
+$time_end = microtime(1);
+$time = $time_end - $time_start;
+
+echo "Time is: $time sec\n";
 
 
-
-    	?>
+?>

@@ -5,21 +5,14 @@
 */
 class ErrorHandler
 {
-
-function test($type) 
-{ 
-    
-    return "huiohuio"; 
-} 
-
-	public static function my_error_handler()
+		public static function my_error_handler()
 	{
 		$last_error = error_get_last();	
 
-		$type = $last_error[type];	
-		$message = $last_error[message];
-		$file = $last_error[file];
-		$line = $last_error[line];		
+		$type = $last_error['type'];	
+		$message = $last_error['message'];
+		$file = $last_error['file'];
+		$line = $last_error['line'];		
 
 		if ($last_error)
 		{        

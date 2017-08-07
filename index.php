@@ -11,6 +11,9 @@ $config = new Config();
 
 ini_set('display_errors', $config::DEBUG);
 ini_set('display_startup_errors', $config::DEBUG);
+ini_set('log_errors', $config::LOGERRORS);
+ini_set('error_log', $config::ERRORLOG);
+
 error_reporting(E_ALL);
 
 $core = new CoreController();

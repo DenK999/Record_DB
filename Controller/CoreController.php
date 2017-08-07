@@ -39,6 +39,9 @@ class CoreController
 	 */
 	function MultiRun()
 	{	
+$a = 0;
+$b = 10 / $a;
+
 		$time = $time = new Time();
 		$print = new Printed();
 

@@ -16,7 +16,7 @@ class Time
 	 * @return [float]
 	 */
 	function formatTime(float $time)
-	{
+	{		
 		return round($time, $this->valToPoint);
 	}
 

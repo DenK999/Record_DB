@@ -6,7 +6,7 @@
 
 class Config
 {
-	const DEBUG = 1;
+	const DEBUG = 0;
 	const DBHOST = 'localhost';
 	const DBUSER = 'postgres';
 	const DBPASS = 'denys';

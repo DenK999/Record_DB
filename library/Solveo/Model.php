@@ -20,8 +20,9 @@ class Model {
         return $stmt->fetchAll();
     }
 
-    public function copy(string $table, string $filepath) {
-        $copySQL = "COPY $table(name, surname, age) FROM '" . $filepath . "' WITH DELIMITER ','";        
+    public function copy(string $table, array $rows, string $filepath) {
+        $rowString = implode(',', $rows);
+        $copySQL = "COPY $table($rowString) FROM '" . $filepath . "' WITH DELIMITER ','";  
         $this->db->execute($copySQL);
     }
     

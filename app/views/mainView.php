@@ -1,4 +1,7 @@
-<?php foreach ($data as $key=>$time): ?>
+<?php 
+//echo '<pre>';
+//var_dump($data);die;
+foreach ($data as $key=>$time): ?>
 
 <p>
     <?php echo "Step - $key: "; 

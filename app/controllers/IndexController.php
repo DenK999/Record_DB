@@ -46,7 +46,7 @@ class IndexController extends \Solveo\Controller {
 
 
             $timeStart = microtime(1);
-            $this->model->copy('users', $path);
+            $this->model->copy('users', array('name', 'surname', 'age'), $path);
             $timeCopyToDB = microtime(1) - $timeStart;
             $this->data[$step]['copyToDB'] = round($timeCopyToDB, 3);
         } catch (Exception $e) {
@@ -74,9 +74,12 @@ class IndexController extends \Solveo\Controller {
     public function startAction() {
         $core = new \Solveo\Controller\CoreController();
 
-        $core->oneCurlRun();
-
-        $core->MultiRun();
+        $core->oneCurlRun();        
+        
+        $this->data['main']['all'] = $core->MultiRun(); 
+        
+        $this->view->generate('mainView.php', 'templateView.php', $this->data);
+        
     }
 
 }

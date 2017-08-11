@@ -4,7 +4,8 @@ $config = include('./app/config/config.php');
 
 ini_set('display_errors', $config->site->debug);
 ini_set('display_startup_errors', $config->site->debug);
-ini_set('error_log', $config->site->path_error_log);
+ini_set('log_errors', $config->site->logErrors);
+ini_set('error_log', $config->site->pathErrorLog);
 
 error_reporting(E_ALL);
 

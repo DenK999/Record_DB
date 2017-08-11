@@ -8,15 +8,16 @@ return (object) array(
         'pass'   => 'denys'
     ),
     'site' => (object) array(
-        'debug'           => 'true',
-        'path_error_log'  => $_SERVER['DOCUMENT_ROOT'].'/errors/php_errors.log'
+        'debug'           => 'false',
+        'pathErrorLog'    => $_SERVER['DOCUMENT_ROOT'].'/errors/php_errors.log',
+        'logErrors'       => 'On'
         
     ),
     'file' => (object) array(
-        'file_name'  => 'file',
-        'path_tmp'   => '/tmp/',
-        'csv_extent' => '.csv',
-        'php_extent' => '.php'
+        'fileName'  => 'file',
+        'pathTmp'   => '/tmp/',
+        'csvExtent' => '.csv',
+        'phpExtent' => '.php'
     )
     
 );

@@ -2,19 +2,22 @@
 
 namespace Solveo;
 
+/**
+ * class to route
+ */
 class Route {
 
+    /**
+     * function start to route
+     */
     static function start() {
         $controllerName = 'index';
-        $actionName = 'index'; 
+        $actionName = 'index';
 
         $routes = explode('/', $_SERVER['REDIRECT_URL']);
-        
-
         if (!empty($routes[1])) {
             $controllerName = $routes[1];
         }
-
         if (!empty($routes[2])) {
             $actionName = $routes[2];
         }
@@ -29,14 +32,12 @@ class Route {
         } else {
             header("HTTP/1.0 404 Not Found");
         }
-
         if (__NAMESPACE__ != "") {
             $controllerName = '\\' . __NAMESPACE__ . '\\' . $controllerName;
         }
 
         $controller = new $controllerName;
         $action = $actionName;
-
         if (method_exists($controller, $action)) {
             $controller->$action();
         } else {

@@ -19,22 +19,33 @@ class Db {
         $this->user = $config->db->user;
     }
 
+    /**
+     * 
+     * @return \PDO connection
+     */
     public function connect() {
         try {
             $pdo = new \PDO($this->connectionString, $this->user, $this->pass);
         } catch (PDOException $ex) {
             echo($ex->getMessage());
         }
-
         return $pdo;
     }
 
-    public function query($sql) {
+    /**
+     * 
+     * @param string $sql
+     * @return SQL query
+     */
+    public function query(string $sql) {
         return $this->connect()->query($sql);
     }
 
-    public function execute($sql) {
-
+    /**
+     * 
+     * @param string $sql
+     */
+    public function execute(string $sql) {
         try {
             $statement = $this->connect()->prepare($sql);
             $statement->execute();

@@ -4,6 +4,9 @@ namespace Solveo\Controller;
 
 class CoreController {
 
+    /**
+     * function for one cUrl (to clear table to DB)
+     */
     function oneCurlRun() {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, "test.solveo/index/curl?step=0");
@@ -15,7 +18,7 @@ class CoreController {
     /**
      * function for multi cUrl
      */
-    function MultiRun() {        
+    function MultiRun() {
         $core = 4;
         
         $timeStartMain = microtime(1);
@@ -24,7 +27,6 @@ class CoreController {
         $i = 1;
 
         while ($i <= $core) {
-
             $ch[$i] = curl_init();
 
             // set URL and other appropriate options 

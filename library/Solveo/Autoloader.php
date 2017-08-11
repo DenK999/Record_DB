@@ -4,6 +4,10 @@ namespace Solveo;
 
 class Autoloader {
 
+    /**
+     *
+     * @var array $namespace to autoload function
+     */
     protected $namespaceMap = array();
 
     public function addNamespace(string $namespace, string $rootDir) {
@@ -21,10 +25,18 @@ class Autoloader {
         return false;
     }
 
+    /**
+     * autoload register function
+     */
     public function register() {
         spl_autoload_register(array($this, 'autoload'));
     }
 
+    /**
+     * 
+     * @param type $className
+     * @return path file
+     */
     protected function autoload($className) {
         $namespace = $className;
 
@@ -45,7 +57,13 @@ class Autoloader {
         }
     }
 
-    protected function loadMappedFile($namespace, $relativeClass) {
+    /**
+     * 
+     * @param string $namespace
+     * @param string $relativeClass
+     * @return boolean
+     */
+    protected function loadMappedFile(string $namespace, string $relativeClass) {
         if (!isset($this->namespaceMap[$namespace])) {
             return false;
         }

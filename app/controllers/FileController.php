@@ -5,19 +5,18 @@ namespace Solveo\Controller;
 class FileController {
 
     /**
-     * [$stack description]
      * @var string
      */
     public $stack = "";
 
     /**
-     * [$age random age]
+     * random age
      * @var integer
      */
     public $age = 1;
 
     /**
-     * [$name random name]
+     * random name
      * @var string
      */
     public $name = "";
@@ -29,25 +28,25 @@ class FileController {
     public $surname = "";
 
     /**
-     * [$alphabet alphabet for random string]
+     * $alphabet alphabet for random string
      * @var string
      */
     public $alphabet = "abcdefghijklmnopqrstuvwxyz";
 
     /**
-     * [$start start value to random string]
+     * $start start value to random string
      * @var integer
      */
     public $start = 0;
 
     /**
-     * [$length lenght to random string]
+     * $length lenght to random string
      * @var integer
      */
     public $length = 15;
 
     /**
-     * [$countRecords countRecords for add to one file]
+     * $countRecords countRecords for add to one file
      * @var integer
      */
     public $countRecords = 12500;
@@ -60,7 +59,6 @@ class FileController {
      */
     function randomDataAction(int $step) {
         try {
-
             for ($i = 0; $i < $this->countRecords; $i++) {
                 $id = $i + $step * $this->countRecords;
                 $this->age = rand(1, 99);
@@ -87,7 +85,6 @@ class FileController {
             fclose($file);
         }
         if ($step != 0) {
-
             $file = fopen($filepath, "a");
             fwrite($file, $this->randomDataAction($step));
             fclose($file);
@@ -96,7 +93,7 @@ class FileController {
 
     /**
      * function return random name or surname lenght = 15 symbols
-     * @return [string]
+     * @return string
      */
     function randomStringAction() {
         return substr(str_shuffle($this->alphabet), $this->start, $this->length);

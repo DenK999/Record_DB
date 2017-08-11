@@ -1,0 +1,403 @@
+[10-Aug-2017 09:42:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Soldveo\Model\User' not found in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php:24
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->testAction()
+#1 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#2 /home/denys/Projekt/mvcproject/index.php(19): require_once('/home/denys/Pro...')
+#3 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 24
+[10-Aug-2017 09:45:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetchAll() on boolean in /home/denys/Projekt/mvcproject/library/Solveo/Model.php:20
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(26): Solveo\Model->get(10)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->testAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(19): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 20
+[10-Aug-2017 09:47:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetchAll() on boolean in /home/denys/Projekt/mvcproject/library/Solveo/Model.php:20
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(26): Solveo\Model->get(10)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->testAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(19): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 20
+[10-Aug-2017 09:48:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function fetchAll() on boolean in /home/denys/Projekt/mvcproject/library/Solveo/Model.php:20
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(26): Solveo\Model->get(10)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->testAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(19): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 20
+[10-Aug-2017 09:56:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\FileController' not found in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php:32
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->generateAction()
+#1 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#2 /home/denys/Projekt/mvcproject/index.php(19): require_once('/home/denys/Pro...')
+#3 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 32
+[10-Aug-2017 09:58:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\FileController' not found in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php:32
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->generateAction()
+#1 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#2 /home/denys/Projekt/mvcproject/index.php(20): require_once('/home/denys/Pro...')
+#3 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 32
+[10-Aug-2017 09:59:10 Europe/Berlin] PHP Notice:  Undefined property: Solveo\Controller\FileController::$countRecords in /home/denys/Projekt/mvcproject/app/controllers/FileController.php on line 12
+[10-Aug-2017 09:59:10 Europe/Berlin] PHP Notice:  Undefined property: Solveo\Controller\FileController::$stack in /home/denys/Projekt/mvcproject/app/controllers/FileController.php on line 26
+[10-Aug-2017 10:15:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Controller\Time' not found in /home/denys/Projekt/mvcproject/app/controllers/FileController.php:84
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(36): Solveo\Controller\FileController->saveRowAction('/home/denys/Pro...', 1)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->generateAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(20): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/FileController.php on line 84
+[10-Aug-2017 10:15:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Controller\Time' not found in /home/denys/Projekt/mvcproject/app/controllers/FileController.php:84
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(36): Solveo\Controller\FileController->saveRowAction('/home/denys/Pro...', 1)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(49): Solveo\IndexController->generateAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(20): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/FileController.php on line 84
+[10-Aug-2017 10:16:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Controller\Time' not found in /home/denys/Projekt/mvcproject/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/denys/Projekt/mvcproject/index.php on line 24
+[10-Aug-2017 10:16:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Controller\Time' not found in /home/denys/Projekt/mvcproject/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/denys/Projekt/mvcproject/index.php on line 24
+[10-Aug-2017 10:20:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Library\Printed' not found in /home/denys/Projekt/mvcproject/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/denys/Projekt/mvcproject/index.php on line 27
+[10-Aug-2017 10:35:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Model\Foo2' not found in /home/denys/Projekt/mvcproject/index.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/denys/Projekt/mvcproject/index.php on line 23
+[10-Aug-2017 11:33:57 Europe/Berlin] PHP Notice:  Undefined variable: controller_name in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 23
+[10-Aug-2017 11:33:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class '\Solveo\IndexController' not found in /home/denys/Projekt/mvcproject/library/Solveo/Route.php:36
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#1 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#2 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 36
+[10-Aug-2017 11:38:46 Europe/Berlin] PHP Warning:  include(../../app/config/config.php): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 5
+[10-Aug-2017 11:38:46 Europe/Berlin] PHP Warning:  include(): Failed opening '../../app/config/config.php' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 5
+[10-Aug-2017 11:40:56 Europe/Berlin] PHP Notice:  Undefined variable: config in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:40:56 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "www-data"
+FATAL:  password authentication failed for user "www-data" in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:22
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(22): PDO->__construct('pgsql:host='loc...', NULL, 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(31): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:42:22 Europe/Berlin] PHP Notice:  Undefined variable: config in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:42:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "www-data"
+FATAL:  password authentication failed for user "www-data" in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:22
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(22): PDO->__construct('pgsql:host='loc...', NULL, 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(31): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:42:41 Europe/Berlin] PHP Notice:  Undefined variable: config in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:42:41 Europe/Berlin] PHP Notice:  Trying to get property of non-object in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:42:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "www-data"
+FATAL:  password authentication failed for user "www-data" in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:22
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(22): PDO->__construct('pgsql:host='loc...', NULL, 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(31): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 22
+[10-Aug-2017 11:43:36 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PDO::__construct() expects parameter 2 to be string, object given in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:23
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(23): PDO->__construct('pgsql:host='loc...', Object(stdClass), 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(32): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 23
+[10-Aug-2017 11:45:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] fe_sendauth: no password supplied in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:25
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(25): PDO->__construct('pgsql:host='loc...', '', '')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(34): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 25
+[10-Aug-2017 11:46:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "www-data"
+FATAL:  password authentication failed for user "www-data" in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:26
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(26): PDO->__construct('pgsql:host='loc...', '', 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(35): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 26
+[10-Aug-2017 11:46:54 Europe/Berlin] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 19
+[10-Aug-2017 11:47:59 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$name in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 19
+[10-Aug-2017 11:47:59 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08006] [7] FATAL:  password authentication failed for user "www-data"
+FATAL:  password authentication failed for user "www-data" in /home/denys/Projekt/mvcproject/library/Solveo/Db.php:27
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(27): PDO->__construct('pgsql:host=loca...', 'postgres', 'denys')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Db.php(36): Solveo\Db->connect()
+#2 /home/denys/Projekt/mvcproject/library/Solveo/Model.php(19): Solveo\Db->query('SELECT * FROM u...')
+#3 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(24): Solveo\Model->get(10)
+#4 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->getrowAction()
+#5 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#6 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#7 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Db.php on line 27
+[10-Aug-2017 11:59:07 Europe/Berlin] PHP Notice:  Undefined variable: pateh in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 34
+[10-Aug-2017 11:59:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Solveo\Controller\FileController::saveRowAction() must be of the type string, null given, called in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 34 and defined in /home/denys/Projekt/mvcproject/app/controllers/FileController.php:81
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(34): Solveo\Controller\FileController->saveRowAction(NULL, 1)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->generateAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/FileController.php on line 81
+[10-Aug-2017 12:05:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function copy() on null in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php:43
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#1 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#2 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#3 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 12:06:05 Europe/Berlin] PHP Notice:  Use of undefined constant users - assumed 'users' in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 12:06:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Solveo\Model::copy() must be of the type array, string given, called in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43 and defined in /home/denys/Projekt/mvcproject/library/Solveo/Model.php:23
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(43): Solveo\Model->copy('users', '/home/denys/Pro...')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 23
+[10-Aug-2017 12:06:32 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to Solveo\Model::copy() must be of the type array, string given, called in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43 and defined in /home/denys/Projekt/mvcproject/library/Solveo/Model.php:23
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(43): Solveo\Model->copy('users', '/home/denys/Pro...')
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 23
+[10-Aug-2017 12:06:59 Europe/Berlin] PHP Notice:  Undefined variable: sql in /home/denys/Projekt/mvcproject/library/Solveo/Model.php on line 25
+[10-Aug-2017 12:15:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function run() on null in /home/denys/Projekt/mvcproject/app/controllers/TimeController.php:30
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(45): Solveo\Controller\TimeController->Test(NULL)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/TimeController.php on line 30
+[10-Aug-2017 12:27:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/denys/Projekt/mvcproject/app/controllers/TimeController.php:30
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(45): Solveo\Controller\TimeController->Test(NULL)
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/TimeController.php on line 30
+[10-Aug-2017 12:33:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Solveo\Controller\TimeController::Test() in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php:45
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(40): Solveo\IndexController->copyAction()
+#1 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#2 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#3 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 45
+[10-Aug-2017 13:36:43 Europe/Berlin] PHP Notice:  Undefined variable: core in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 26
+[10-Aug-2017 13:37:05 Europe/Berlin] PHP Notice:  Undefined variable: url in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 31
+[10-Aug-2017 13:37:05 Europe/Berlin] PHP Notice:  Undefined variable: url in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 31
+[10-Aug-2017 13:37:05 Europe/Berlin] PHP Notice:  Undefined variable: url in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 31
+[10-Aug-2017 13:37:05 Europe/Berlin] PHP Notice:  Undefined variable: url in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 31
+[10-Aug-2017 14:03:19 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 14:03:19 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 14:03:19 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 14:03:19 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 43
+[10-Aug-2017 14:04:35 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 41
+[10-Aug-2017 14:04:35 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 41
+[10-Aug-2017 14:04:35 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 41
+[10-Aug-2017 14:04:35 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 41
+[10-Aug-2017 14:12:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function Solveo\IndexController() in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php:27
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(68): Solveo\Controller\CoreController->MultiRun()
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(41): Solveo\IndexController->startAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 27
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Warning:  Missing argument 1 for Solveo\IndexController::curlAction(), called in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 41 and defined in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 52
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 54
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 60
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Warning:  Missing argument 1 for Solveo\IndexController::curlAction(), called in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 41 and defined in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 52
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 54
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Warning:  Missing argument 1 for Solveo\IndexController::curlAction(), called in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 41 and defined in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 52
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 54
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Warning:  Missing argument 1 for Solveo\IndexController::curlAction(), called in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 41 and defined in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 52
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 54
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Warning:  Missing argument 1 for Solveo\IndexController::curlAction(), called in /home/denys/Projekt/mvcproject/library/Solveo/Route.php on line 41 and defined in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 52
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 54
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 60
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 60
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 60
+[10-Aug-2017 14:14:53 Europe/Berlin] PHP Notice:  Undefined variable: step in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 60
+[10-Aug-2017 14:15:40 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 61
+[10-Aug-2017 14:15:40 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 61
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 61
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 61
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 61
+[10-Aug-2017 14:15:41 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 8
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'id' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 10
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'name' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 11
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'surname' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 12
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'age' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 13
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'id' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 10
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'name' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 11
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'surname' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 12
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'age' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 13
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'id' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 10
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'name' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 11
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'surname' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 12
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'age' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 13
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'id' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 10
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'name' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 11
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'surname' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 12
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'age' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 13
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'id' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 10
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'name' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 11
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'surname' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 12
+[10-Aug-2017 14:16:20 Europe/Berlin] PHP Warning:  Illegal string offset 'age' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 13
+[10-Aug-2017 14:19:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 4
+[10-Aug-2017 14:19:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 4
+[10-Aug-2017 14:19:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 4
+[10-Aug-2017 14:19:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 4
+[10-Aug-2017 14:19:57 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$row' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 4
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant common - assumed 'common' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant execution_time - assumed 'execution_time' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  Division by zero in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant phtml - assumed 'phtml' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(NANphtml): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'NANphtml' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant common - assumed 'common' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant common - assumed 'common' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant execution_time - assumed 'execution_time' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant execution_time - assumed 'execution_time' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  Division by zero in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  Division by zero in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant phtml - assumed 'phtml' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant phtml - assumed 'phtml' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(NANphtml): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'NANphtml' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(NANphtml): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'NANphtml' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant common - assumed 'common' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant execution_time - assumed 'execution_time' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  Division by zero in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant phtml - assumed 'phtml' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(NANphtml): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'NANphtml' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant common - assumed 'common' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant execution_time - assumed 'execution_time' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  Division by zero in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Notice:  Use of undefined constant phtml - assumed 'phtml' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(NANphtml): failed to open stream: No such file or directory in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'NANphtml' for inclusion (include_path='.:/usr/share/php') in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:24:50 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:24:51 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:24:51 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:24:51 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:24:51 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:25:11 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:25:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:25:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:25:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:25:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 9
+[10-Aug-2017 14:25:23 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:25:23 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:25:23 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:25:23 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:25:23 Europe/Berlin] PHP Notice:  Undefined variable: time in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 14:30:20 Europe/Berlin] PHP Notice:  Undefined variable: data in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 64
+[10-Aug-2017 14:30:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 1
+[10-Aug-2017 14:34:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$time' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 6
+[10-Aug-2017 14:34:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$time' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 6
+[10-Aug-2017 14:34:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$time' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 6
+[10-Aug-2017 14:34:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$time' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 6
+[10-Aug-2017 14:34:45 Europe/Berlin] PHP Parse error:  syntax error, unexpected '$time' (T_VARIABLE), expecting ',' or ';' in /home/denys/Projekt/mvcproject/app/views/mainView.php on line 6
+[10-Aug-2017 14:39:20 Europe/Berlin] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 42
+[10-Aug-2017 15:08:41 Europe/Berlin] PHP Notice:  Use of undefined constant generateFile - assumed 'generateFile' in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 45
+[10-Aug-2017 15:08:41 Europe/Berlin] PHP Notice:  Use of undefined constant generateFile - assumed 'generateFile' in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 45
+[10-Aug-2017 15:08:41 Europe/Berlin] PHP Notice:  Use of undefined constant generateFile - assumed 'generateFile' in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 45
+[10-Aug-2017 15:08:41 Europe/Berlin] PHP Notice:  Use of undefined constant generateFile - assumed 'generateFile' in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 45
+[10-Aug-2017 15:08:42 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:42 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:42 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:42 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:54 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:54 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:54 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:08:54 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:16:42 Europe/Berlin] PHP Notice:  Undefined index: Main time in /home/denys/Projekt/mvcproject/app/controllers/IndexController.php on line 82
+[10-Aug-2017 15:17:14 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:17:14 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:17:14 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:17:14 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:18:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Solveo\Controller\TimeController' not found in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php:20
+Stack trace:
+#0 /home/denys/Projekt/mvcproject/app/controllers/IndexController.php(80): Solveo\Controller\CoreController->MultiRun()
+#1 /home/denys/Projekt/mvcproject/library/Solveo/Route.php(41): Solveo\IndexController->startAction()
+#2 /home/denys/Projekt/mvcproject/web_public/bootstrap.php(5): Solveo\Route::start()
+#3 /home/denys/Projekt/mvcproject/index.php(21): require_once('/home/denys/Pro...')
+#4 {main}
+  thrown in /home/denys/Projekt/mvcproject/app/controllers/CoreController.php on line 20
+[10-Aug-2017 15:20:08 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:20:08 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:20:09 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:20:09 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:22 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:22 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:22 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:22 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:59 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:59 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:59 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:22:59 Europe/Berlin] PHP Notice:  Array to string conversion in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 1
+[10-Aug-2017 15:34:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 5
+[10-Aug-2017 15:34:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 5
+[10-Aug-2017 15:34:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 5
+[10-Aug-2017 15:34:00 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file in /home/denys/Projekt/mvcproject/app/views/common/execution_time.phtml on line 5

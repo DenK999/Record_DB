@@ -13,7 +13,7 @@ class View {
      * @param type $template
      * @param type $data
      */
-    public function generate($content, $template, $data = null) {
-        include $_SERVER['DOCUMENT_ROOT'] . '/app/views/' . $template;
+    public function generate($contentView, $templateView, $workTime = null) {
+        include Config::get()->dirs->views . $templateView;
     }
 }

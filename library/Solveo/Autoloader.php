@@ -9,6 +9,12 @@ class Autoloader {
      * @var array $namespace to autoload function
      */
     protected $namespaceMap = array();
+    
+    
+    public function __construct()
+    {
+        spl_autoload_register(array($this, 'autoload'));
+    }
 
     public function addNamespace(string $namespace, string $rootDir) {
 
@@ -24,14 +30,7 @@ class Autoloader {
 
         return false;
     }
-
-    /**
-     * autoload register function
-     */
-    public function register() {
-        spl_autoload_register(array($this, 'autoload'));
-    }
-
+    
     /**
      * 
      * @param type $className
@@ -47,7 +46,6 @@ class Autoloader {
             $relativeClass = substr($className, $position + 1);
 
             $mappedFile = $this->loadMappedFile($namespace, $relativeClass);
-
 
             if ($mappedFile) {
                 return $mappedFile;

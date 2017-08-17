@@ -11,12 +11,13 @@ class Db {
     private $connectionString = '';
     private $user = '';
     private $pass = '';
+    
+    private $connection;
 
     function __construct() {
-        $config = include $_SERVER['DOCUMENT_ROOT'] . '/app/config/config.php';
-        $this->connectionString = "pgsql:host=" . $config->db->host . "; dbname=" . $config->db->dbname;
-        $this->pass = $config->db->pass;
-        $this->user = $config->db->user;
+        $this->connectionString = "pgsql:host=" . Config::get()->db->host . "; dbname=" . Config::get()->db->dbname;
+        $this->pass = Config::get()->db->pass;
+        $this->user = Config::get()->db->user;
     }
 
     /**
@@ -25,33 +26,10 @@ class Db {
      */
     public function connect() {
         try {
-            $pdo = new \PDO($this->connectionString, $this->user, $this->pass);
-        } catch (PDOException $ex) {
-            echo($ex->getMessage());
+            $this->connection = new \PDO($this->connectionString, $this->user, $this->pass);           
+        } catch (\PDOException $ex) {           
+            throw new PHPErrorException($ex->getMessage(), 'Nie można polaczyc sie z baza');
         }
-        return $pdo;
+        return $this->connection;
     }
-
-    /**
-     * 
-     * @param string $sql
-     * @return SQL query
-     */
-    public function query(string $sql) {
-        return $this->connect()->query($sql);
-    }
-
-    /**
-     * 
-     * @param string $sql
-     */
-    public function execute(string $sql) {
-        try {
-            $statement = $this->connect()->prepare($sql);
-            $statement->execute();
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
-
 }

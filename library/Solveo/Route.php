@@ -12,29 +12,20 @@ class Route {
      */
     static function start() {
         $controllerName = 'index';
-        $actionName = 'index';
+        $actionName = 'index';        
 
-        $routes = explode('/', $_SERVER['REDIRECT_URL']);
-        if (!empty($routes[1])) {
-            $controllerName = $routes[1];
-        }
-        if (!empty($routes[2])) {
-            $actionName = $routes[2];
+        if (!empty($_SERVER['REDIRECT_URL'])) {
+            $routes = explode('/', $_SERVER['REDIRECT_URL']);
+            if (!empty($routes[1])) {
+                $controllerName = $routes[1];
+            }
+            if (!empty($routes[2])) {
+                $actionName = $routes[2];
+            }
         }
 
-        $controllerName = ucfirst($controllerName) . 'Controller';
+        $controllerName = "\\Solveo\\Controller\\".ucfirst($controllerName) . "Controller";
         $actionName = $actionName . 'Action';
-        $controllerFile = $controllerName . '.php';
-        $controllerFilePath = $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/' . $controllerFile;
-
-        if (file_exists($controllerFilePath)) {
-            include $controllerFilePath;
-        } else {
-            header("HTTP/1.0 404 Not Found");
-        }
-        if (__NAMESPACE__ != "") {
-            $controllerName = '\\' . __NAMESPACE__ . '\\' . $controllerName;
-        }
 
         $controller = new $controllerName;
         $action = $actionName;
@@ -44,5 +35,4 @@ class Route {
             header("HTTP/1.0 404 Not Found");
         }
     }
-
 }

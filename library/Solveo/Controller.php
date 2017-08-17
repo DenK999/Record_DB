@@ -4,11 +4,6 @@ namespace Solveo;
 
 class Controller {
 
-    /**
-     *
-     * @var object Model 
-     */
-    public $model;
 
     /**
      *
@@ -21,14 +16,5 @@ class Controller {
      */
     function __construct() {
         $this->view = new View();
-        $this->model = new Model();
     }
-
-    /**
-     * function indexAction to Base Controller
-     */
-    public function indexAction() {
-        
-    }
-
 }

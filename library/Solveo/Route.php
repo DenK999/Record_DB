@@ -12,7 +12,7 @@ class Route {
      */
     static function start() {
         $controllerName = 'index';
-        $actionName = 'index';        
+        $actionName = 'index'; 
 
         if (!empty($_SERVER['REDIRECT_URL'])) {
             $routes = explode('/', $_SERVER['REDIRECT_URL']);

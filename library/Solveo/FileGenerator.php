@@ -54,7 +54,7 @@ class FileGenerator {
                 $stack .= "$name,$surname,$age\n";
             }
         } catch (Exception $e) {
-            throw new PHPErrorException($ex->getMessage(), 'Nie można zgenerować plik');
+            throw new PHPErrorException('Nie można zgenerować plik');
         }
 
         return $stack;

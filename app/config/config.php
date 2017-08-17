@@ -8,10 +8,10 @@ return [
         'pass' => 'denys'
     ],
     'site' => [
-        'debug' => 1,
+        'debug' => 0,
         'pathErrorLog' => APP_DIR . '/errors/php_errors.log',
         'logErrors' => 'On',
-        'test_error_log' => APP_DIR . '/errors/test_php_errors.log'
+        'defaultErroLog' => APP_DIR . '/errors/default_php_errors.log'
     ],
     'dirs' => [
         'views' => APP_DIR . '/app/views/',

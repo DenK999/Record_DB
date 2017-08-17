@@ -4,38 +4,70 @@ namespace Solveo;
 
 class PHPErrorException extends \Exception {
 
-    protected $error;
-    protected $message;
+    /**
+     *
+     * @var string 
+     */
+    protected $errorMessage = "Coś poszło nie tak. Już poprawiamy ten błąd";    
 
-    function __construct(string $error = '', string $message = '') {
-        $this->error = $error;
-        $this->message = $message;
-        $this->initSystemHandlers();
+    /**
+     * register of error handlers
+     */
+    public function register() {
+        set_error_handler([$this, 'handleError']);
+        register_shutdown_function([$this, 'fatalHandleError']);
+        set_exception_handler([$this, 'handleException']);
     }
 
-    public static function my_error_handler() {
-        set_exception_handler(array($this, 'handleException'));
-        //set_error_handler(array($this, 'handleError'), error_reporting());
+    /**
+     * 
+     * @param type $errNumb
+     * @param type $errorStr
+     * @param type $errorFile
+     * @param type $errorLine
+     * @return boolean
+     */
+    public function handleError($errNumb, $errorStr, $errorFile, $errorLine) {       
+        echo $this->errorMessage;
+        $this->writeToLog($errNumb, $errorFile, $errorLine, $errorStr);
+        return true;
     }
 
-    protected function initSystemHandlers() {
-        set_exception_handler(array($this, 'handleException'));
-        set_error_handler(array($this, 'handleError'), error_reporting());
+    /**
+     * function handler of fatal error
+     */
+    public function fatalHandleError() {        
+        if ($error = error_get_last()) {            
+            $this->writeToLog($error['type'], $error['file'], $error['line'], $error['message']);
+            echo $this->errorMessage;            
+        }
+    }
+    
+    /**
+     * 
+     * @param type $e
+     * @return boolean
+     */
+    public function handleException($e){
+        echo $e->getMessage();
+        $this->writeToLog($e->getCode(), $e->getFile(), $e->getLine(), $e->getMessage());
+        
+        return true;
     }
 
-    public function handleException($exception) {
-        echo '<pre>';
-        var_dump($this->error . "\r\n");
-        error_log(date("Y.m.d, g:i a") . "\n" .
-                $this->error .
-                "\r\n", 3, Config::get()->site->test_error_log);
-        echo $this->message;
+    /**
+     * function write errors to log file
+     * @param type $errNumb
+     * @param type $errorFile
+     * @param type $errorLine
+     * @param type $errorStr
+     */
+    protected function writeToLog($errNumb, $errorFile, $errorLine, $errorStr) {
+        error_log(date("Y.m.d, g:i a") . "\n"
+                . "ErrNumb: " . $errNumb . "\n"
+                . "File: " . $errorFile . "\n"
+                . "Line: " . $errorLine . "\n"
+                . "Error: " . $errorStr . "\n", 3, Config::get()->site->defaultErroLog);
     }
-
-//    public function handleError($exception) {
-//        echo '<pre>';
-//        var_dump("handleError");
-//        die;
-//    }
 
 }

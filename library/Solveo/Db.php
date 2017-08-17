@@ -28,7 +28,7 @@ class Db {
         try {
             $this->connection = new \PDO($this->connectionString, $this->user, $this->pass);           
         } catch (\PDOException $ex) {           
-            throw new PHPErrorException($ex->getMessage(), 'Nie można polaczyc sie z baza');
+            throw new PHPErrorException('Nie można polaczyc sie z bazą');
         }
         return $this->connection;
     }

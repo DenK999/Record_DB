@@ -59,8 +59,7 @@ class User extends \Solveo\Model {
             $res->execute();
 
             if (!$res->execute()) {
-                echo '<pre>';
-                print_r($res->errorInfo());
+                throw new \Solveo\PHPErrorException('Nie można pobrać takich danych');
             }
 
             foreach ($res as $row) {
@@ -72,7 +71,7 @@ class User extends \Solveo\Model {
                 return true;
             }
         } catch (PDOException $e) {
-            throw new PHPErrorException($e->getMessage(), 'Nie można pobrać dane');
+            throw new PHPErrorException('Nie można pobrać dane');
         }
 
         return false;

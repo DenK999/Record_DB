@@ -17,6 +17,8 @@ $autoload->addNamespace('Solveo', APP_DIR.'/library/Solveo');
 $autoload->addNamespace('Solveo\Model', APP_DIR.'/app/models');
 $autoload->addNamespace('Solveo\Controller', APP_DIR.'/app/controllers');
 
+(new \Solveo\PHPErrorException())->register();
+
 Solveo\Route::start();  //start app
 
 

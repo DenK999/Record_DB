@@ -2,22 +2,28 @@
 
 namespace Solveo;
 
-class Config {
-
-    public static function get(){
+class Config {    
+    
+    public static function get() {
         $config = include APP_DIR . '/app/config/config.php';
         
-        $configObj = new \stdClass();
-        foreach ($config as $key=>$value){
-            if(is_array($value)){
-                $valueObject = (object) $value;               
-                    $configObj->{$key} = $valueObject;
-            }            
-           
-        }
-         return $configObj;
-
+        echo '<pre>';
         
+        $configObj = new \stdClass();
+        
+        Config::recArray($config, $configObj);
+        
+        return $configObj;
     }
-}
     
+    public static function recArray($array, $configObj){
+        
+        foreach ($array as $key =>$value) {            
+            if (is_array($value)) {                 
+                $configObj->{$key} = (object) $value;
+                Config::recArray($value, $configObj->{$key});                  
+            }            
+        }          
+    }
+
+}

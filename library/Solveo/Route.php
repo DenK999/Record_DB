@@ -12,7 +12,7 @@ class Route {
      */
     static function start() {
         $controllerName = 'index';
-        $actionName = 'index'; 
+        $actionName = 'index';
 
         if (!empty($_SERVER['REDIRECT_URL'])) {
             $routes = explode('/', $_SERVER['REDIRECT_URL']);
@@ -24,15 +24,25 @@ class Route {
             }
         }
 
-        $controllerName = "\\Solveo\\Controller\\".ucfirst($controllerName) . "Controller";
+        $controllerName = "\\Solveo\\Controller\\" . ucfirst($controllerName) . "Controller";
+
         $actionName = $actionName . 'Action';
 
-        $controller = new $controllerName;
+
+        if (class_exists($controllerName)) {
+            $controller = new $controllerName;
+        } else {
+            include APP_DIR.'/app/views/errors/404.phtml'; 
+            die(header("HTTP/1.0 404 Not Found"));
+        }
+
         $action = $actionName;
         if (method_exists($controller, $action)) {
             $controller->$action();
         } else {
-            header("HTTP/1.0 404 Not Found");
+            include APP_DIR.'/app/views/errors/404.phtml'; 
+            die(header("HTTP/1.0 404 Not Found"));
         }
     }
+
 }

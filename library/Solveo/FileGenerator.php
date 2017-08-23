@@ -9,12 +9,6 @@ class FileGenerator {
      * @var type string
      */
     public $alphabet = "abcdefghijklmnopqrstuvwxyz";
-
-    /**
-     * $countRecords countRecords for add to one file
-     * @var integer
-     */
-    public $countRecords = 0 /* @todo: wyliczana z configa */;
     
     /**
      * 
@@ -43,22 +37,20 @@ class FileGenerator {
     private function generateRandomString(int $step) {
         $countAllRecords = Config::get()->file->countFileRecord;
         $countCore = Config::get()->core->countCore;
-        $this->countRecords = $countAllRecords / $countCore;        
+        $countRecords = $countAllRecords / $countCore;
         $stack = "";
-        try {
-            for ($i = 0; $i < $this->countRecords; $i++) {
-                $id = $i + $step * $this->countRecords;
-                $age = rand(1, 99);
-                $name = $this->getRandomString();
-                $surname = $this->getRandomString();
-                $stack .= "$name,$surname,$age\n";
-            }
-        } catch (Exception $e) {
-            throw new PHPErrorException('Nie można zgenerować plik');
+
+        for ($i = 0; $i < $countRecords; $i++) {
+            $id = $i + $step * $countRecords;
+            $age = rand(1, 99);
+            $name = $this->getRandomString();
+            $surname = $this->getRandomString();
+            $stack .= "$name,$surname,$age\n";
         }
 
+
         return $stack;
-    }    
+    }
 
     /**
      * function return random name or surname lenght = 15 symbols

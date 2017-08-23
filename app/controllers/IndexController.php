@@ -2,6 +2,8 @@
 
 namespace Solveo\Controller;
 
+use Solveo\Model\User;
+
 /**
  * class IndexController 
  */
@@ -16,14 +18,10 @@ class IndexController extends \Solveo\Controller {
     /**
      * function show index view
      */
-    public function indexAction() {
-
-
-        $user = new \Solveo\Model\User();
-        $user->fetch('50001 or true LIMIT 100');
-        echo "Name - " . $user->name;
-
+    public function indexAction() {        
+        var_dump(\Solveo\Config::get()->site->paths->main->test1); die;
         $this->view->generate('indexView.php', 'templateView.php');
+        
     }
 
     /**
@@ -34,43 +32,37 @@ class IndexController extends \Solveo\Controller {
         $requestArray = explode('/', $_SERVER['REQUEST_URI']);
         $step = end($requestArray);
 
-        try {
-            $file = new \Solveo\FileGenerator();
-            $user = new \Solveo\Model\User();
+        $file = new \Solveo\FileGenerator();
 
-            $path = APP_DIR .
-                    \Solveo\Config::get()->file->pathTmp .
-                    \Solveo\Config::get()->file->fileName .
-                    $step .
-                    \Solveo\Config::get()->file->csvExtent;
+        $path = APP_DIR .
+                \Solveo\Config::get()->file->pathTmp .
+                \Solveo\Config::get()->file->fileName .
+                $step .
+                \Solveo\Config::get()->file->csvExtent;
 
-            $timeStartgenerateFile = microtime(1);
-            $file->saveStringInFile($path, $step);
-            $timeAddFile = round(microtime(1) - $timeStartgenerateFile, 3);
-            $this->workTime[$step]['generateFile'] = $timeAddFile;
+        $timeStartgenerateFile = microtime(1);
+        $file->saveStringInFile($path, $step);
+        $timeAddFile = round(microtime(1) - $timeStartgenerateFile, 3);
+        $this->workTime[$step]['generateFile'] = $timeAddFile;
 
-            $timeStart = microtime(1);
-            $user->copyInFileToDB('users', array('name', 'surname', 'age'), $path);
-            $timeCopyToDB = microtime(1) - $timeStart;
-            $this->workTime[$step]['copyToDB'] = round($timeCopyToDB, 3);
-            $this->view->generate('mainView.php', 'templateView.php', $this->workTime);
-        } catch (Exception $e) {
-            throw new PHPErrorException('Nie można zgenerować lub zapisać plik');
-        }
+        $timeStart = microtime(1);
+        User::copyInFileToDB('users', array('name', 'surname', 'age'), $path);
+        $timeCopyToDB = microtime(1) - $timeStart;
+        $this->workTime[$step]['copyToDB'] = round($timeCopyToDB, 3);
+        $this->view->generate('mainView.php', 'templateView.php', $this->workTime);
     }
 
     /**
      * function to clear table to DB
      */
     public function clearTableAction() {
-        $user = new \Solveo\Model\User();
-        $user->clearTableUsers();
+        User::clearTableUsers();
     }
 
     /**
      * function to start generate and write data
      */
-    public function startAction() {
+    public function startAction() {        
         $core = new \Solveo\Core();
         $this->clearTableAction();
         $this->workTime['main']['all'] = $core->multiCoreRun();

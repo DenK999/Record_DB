@@ -2,21 +2,23 @@
 
 namespace Solveo;
 
-class PHPErrorException extends \Exception {
+class PHPErrorException {
 
-    /**
-     *
-     * @var string 
-     */
-    protected $errorMessage = "Coś poszło nie tak. Już poprawiamy ten błąd";    
+    private static $instance = null;
+
+    public static function getInstance() {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
 
     /**
      * register of error handlers
      */
     public function register() {
         set_error_handler([$this, 'handleError']);
-        register_shutdown_function([$this, 'fatalHandleError']);
-        set_exception_handler([$this, 'handleException']);
+        register_shutdown_function([$this, 'fatalHandleError']);        
     }
 
     /**
@@ -27,34 +29,23 @@ class PHPErrorException extends \Exception {
      * @param type $errorLine
      * @return boolean
      */
-    public function handleError($errNumb, $errorStr, $errorFile, $errorLine) {       
-        echo $this->errorMessage;
+    public function handleError($errNumb, $errorStr, $errorFile, $errorLine) {         
         $this->writeToLog($errNumb, $errorFile, $errorLine, $errorStr);
-        return true;
+        $this->showError();
     }
 
     /**
      * function handler of fatal error
      */
-    public function fatalHandleError() {        
+    public function fatalHandleError() { 
         if ($error = error_get_last()) {            
-            $this->writeToLog($error['type'], $error['file'], $error['line'], $error['message']);
-            echo $this->errorMessage;            
+            $this->writeToLog($error['type'], $error['file'], $error['line'], $error['message']);          
+            $this->showError();
         }
-    }
+    }      
     
-    /**
-     * 
-     * @param type $e
-     * @return boolean
-     */
-    public function handleException($e){
-        echo $e->getMessage();
-        $this->writeToLog($e->getCode(), $e->getFile(), $e->getLine(), $e->getMessage());
-        
-        return true;
-    }
-
+   
+    
     /**
      * function write errors to log file
      * @param type $errNumb
@@ -67,7 +58,17 @@ class PHPErrorException extends \Exception {
                 . "ErrNumb: " . $errNumb . "\n"
                 . "File: " . $errorFile . "\n"
                 . "Line: " . $errorLine . "\n"
-                . "Error: " . $errorStr . "\n", 3, Config::get()->site->defaultErroLog);
+                . "Error: " . $errorStr . "\n\n", 3, Config::get()->site->pathErrorLog);
+    }
+    
+    public function showError() {
+        while (ob_get_level()-1) {
+            ob_end_flush();
+        }        
+        ob_clean();
+        
+        include APP_DIR . '/app/views/errors/500.phtml';
+        die(header("HTTP/1.0 500 internal server error"));
     }
 
 }

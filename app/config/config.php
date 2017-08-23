@@ -1,8 +1,12 @@
 <?php
 
 return [
-    'db' => [
+    'db' => [        
         'host' => 'localhost',
+        'paths' => [
+            'main' => 'testMain',
+            'second' => 'testSecond',
+        ],
         'dbname' => 'test_db',
         'user' => 'postgres',
         'pass' => 'denys'
@@ -11,10 +15,15 @@ return [
         'debug' => 0,
         'pathErrorLog' => APP_DIR . '/errors/php_errors.log',
         'logErrors' => 'On',
-        'defaultErroLog' => APP_DIR . '/errors/default_php_errors.log'
+        'paths' => [
+            'main' => [
+                'test1' => 'testMain'
+            ],
+            'second' => 'testSecond'
+        ],
     ],
     'dirs' => [
-        'views' => APP_DIR . '/app/views/',
+        'views' => APP_DIR . '/app/views/'
     ],
     'file' => [
         'fileName' => 'file',

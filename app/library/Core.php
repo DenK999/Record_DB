@@ -1,25 +1,27 @@
 <?php
 
-namespace Solveo;
+use \Phalcon\Di;
 
-class Core {
-   
+class Core{
+
     /**
      * function for multi cUrl
      */
     function multiCoreRun() {
-        $core = \Solveo\Config::get()->core->countCore;
+        $config = Di::getDefault()->getShared('config');
+        
+        $countCore = $config->core->countCore;
         
         $timeStartMain = microtime(1);
 
         $mh = curl_multi_init();
         $i = 1;
 
-        while ($i <= $core) {
+        while ($i <= $countCore) {
             $ch[$i] = curl_init();
 
             // set URL and other appropriate options 
-            curl_setopt($ch[$i], CURLOPT_URL, $_SERVER["HTTP_HOST"]."/index/generate/step/$i");
+            curl_setopt($ch[$i], CURLOPT_URL, $_SERVER["HTTP_HOST"]."/generate/generate/$i");
             curl_setopt($ch[$i], CURLOPT_HEADER, 0);
             curl_multi_add_handle($mh, $ch[$i]);
             $i++;
@@ -29,7 +31,9 @@ class Core {
 
         //execute the handles 
         do {
-            curl_multi_exec($mh, $running);
+            curl_multi_exec($mh, $running);            
+            flush();
+            ob_flush();
         } while ($running > 0);
 
         curl_multi_close($mh);

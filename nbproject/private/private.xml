@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/denys/Projekt/test-phalcon/app/config/config.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/config/router.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/config/services.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/config/loader.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/controllers/IndexController.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/controllers/GenerateController.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/index.html</file>
+            <file>file:/home/denys/Projekt/test-phalcon/public/index.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/views/index.volt</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/models/User.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/library/FileGenerator.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/views/index/index.volt</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/library/Core.php</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/views/generate/index.volt</file>
+            <file>file:/home/denys/Projekt/test-phalcon/app/controllers/ControllerBase.php</file>
+        </group>
+    </open-files>
+</project-private>

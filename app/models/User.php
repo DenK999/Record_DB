@@ -1,79 +1,58 @@
 <?php
 
-namespace Solveo\Model;
+use \Phalcon\Mvc\Model;
 
-use \Solveo\Db;
-
-/**
- * class User
- */
-class User extends \Solveo\Model {
-
-    private $table = 'users';
+class User extends Model {
 
     /**
-     * @var int Id 
+     * Id for user
+     * @var int 
      */
     public $id;
 
     /**
-     * @var int Parent id
-     */
-    public $parent_id;
-
-    /**
-     *
-     * @var string Name 
+     * Name for user
+     * @var string 
      */
     public $name;
 
     /**
-     *
-     * @var string Surname 
+     * Surname for user
+     * @var string 
      */
     public $surname;
 
     /**
-     *
-     * @var int Age 
+     * Age for user
+     * @var int 
      */
     public $age;
 
     /**
      *
-     * @var int Level
+     * @var int 
      */
     public $level;
 
-    public function getId() {
-        return $this->id;
+    /**
+     *
+     * @var int 
+     */
+    public $parent_id;
+
+    /**
+     * 
+     */
+    public function initialize() {
+        $this->setSource("users");
     }
 
-    public function setId($id) {
-        $this->id = $id;
-    }
-
-    public function fetch($id) {
-
-
-        $res = DB::connect()->prepare('SELECT * FROM users WHERE id = :id');
-        $res->bindValue(':id', $id, \PDO::PARAM_INT);
-        $res->execute();
-
-        if (!$res->execute()) {
-            throw new \Solveo\PHPErrorException('Nie można pobrać takich danych');
-        }
-
-        foreach ($res as $row) {
-            $this->name = $row['name'];
-            $this->surname = $row['surname'];
-            $this->age = $row['age'];
-            $this->level = $row['level'];
-            $this->parent_id = $row['parent_id'];
-            return true;
-        }
-
-        return false;
+    /**
+     * 
+     */
+    public static function clearTable() {
+        $self = new self();
+        $self->getDi()->getShared('db')->query("truncate table " . $self->getSource());
     }
 
     /**
@@ -82,19 +61,12 @@ class User extends \Solveo\Model {
      * @param array $rows
      * @param string $filepath
      */
-    public static function copyInFileToDB(string $table, array $rows, string $filepath) {       
+    public static function copyInFileToDB(array $rows, string $filepath) {
+        $self = new self();
+        $table = $self->getSource();
         $rowString = implode(',', $rows);
-        $copy = DB::connect()->prepare("COPY $table($rowString) FROM '" . $filepath . "' WITH DELIMITER ','");        
-        $copy->execute();
-    }
-
-    /**
-     * 
-     * @param string $table
-     */
-    public static function clearTableUsers() {
-        $clear = DB::connect()->prepare("TRUNCATE TABLE users");
-        $clear->execute();
+        $self->getDi()->getShared('db')->query("COPY $table($rowString) FROM '" .
+                $filepath . "' WITH DELIMITER ','");
     }
 
 }

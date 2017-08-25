@@ -1,6 +1,6 @@
 <?php
 
-namespace Solveo;
+use \Phalcon\Di;
 
 class FileGenerator {
 
@@ -9,14 +9,14 @@ class FileGenerator {
      * @var type string
      */
     public $alphabet = "abcdefghijklmnopqrstuvwxyz";
-    
+
     /**
      * 
      * @param string $filepath
      * @param int $step
      * @return float Time for work function
      */
-    function saveStringInFile(string $filepath, int $step) {        
+    public function saveStringInFile(string $filepath, int $step) {
         if (file_exists($filepath) && $step != 0) {
             $file = fopen($filepath, 'w');
             fclose($file);
@@ -34,10 +34,11 @@ class FileGenerator {
      * @param int $step
      * @return string
      */
-    private function generateRandomString(int $step) {
-        $countAllRecords = Config::get()->file->countFileRecord;
-        $countCore = Config::get()->core->countCore;
-        $countRecords = $countAllRecords / $countCore;
+    private function generateRandomString(int $step) {  
+        $config = Di::getDefault()->getShared('config');        
+        $countAllRecords = $config->file->countFileRecord;
+        $countCore = $config->core->countCore;
+        $countRecords = $countAllRecords / $countCore + rand(500, 5000);
         $stack = "";
 
         for ($i = 0; $i < $countRecords; $i++) {
@@ -47,7 +48,6 @@ class FileGenerator {
             $surname = $this->getRandomString();
             $stack .= "$name,$surname,$age\n";
         }
-
 
         return $stack;
     }
